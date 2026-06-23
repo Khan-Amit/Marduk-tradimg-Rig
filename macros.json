@@ -1,0 +1,323 @@
+{
+    "countries": {
+        "US": {
+            "name": "United States",
+            "currency": "USD",
+            "indicators": {
+                "cpi": {
+                    "description": "Consumer Price Index",
+                    "frequency": "monthly",
+                    "source": "BLS",
+                    "weight": 1.0
+                },
+                "gdp": {
+                    "description": "GDP Growth Rate",
+                    "frequency": "quarterly",
+                    "source": "BEA",
+                    "weight": 2.0
+                },
+                "interest_rate": {
+                    "description": "Federal Funds Rate",
+                    "frequency": "monthly",
+                    "source": "FED",
+                    "weight": 2.0
+                },
+                "pmi": {
+                    "description": "Purchasing Managers Index",
+                    "frequency": "monthly",
+                    "source": "ISM",
+                    "weight": 1.0
+                },
+                "retail_sales": {
+                    "description": "Retail Sales",
+                    "frequency": "monthly",
+                    "source": "Census",
+                    "weight": 1.0
+                },
+                "trade_balance": {
+                    "description": "Trade Balance",
+                    "frequency": "monthly",
+                    "source": "Census",
+                    "weight": 1.0
+                },
+                "unemployment": {
+                    "description": "Unemployment Rate",
+                    "frequency": "monthly",
+                    "source": "BLS",
+                    "weight": 1.0
+                },
+                "consumer_confidence": {
+                    "description": "Consumer Confidence Index",
+                    "frequency": "monthly",
+                    "source": "Conference Board",
+                    "weight": 0.5
+                }
+            }
+        },
+        "EU": {
+            "name": "Eurozone",
+            "currency": "EUR",
+            "indicators": {
+                "cpi": {
+                    "description": "Harmonized CPI",
+                    "frequency": "monthly",
+                    "source": "Eurostat",
+                    "weight": 1.0
+                },
+                "gdp": {
+                    "description": "GDP Growth Rate",
+                    "frequency": "quarterly",
+                    "source": "Eurostat",
+                    "weight": 2.0
+                },
+                "interest_rate": {
+                    "description": "ECB Main Refinancing Rate",
+                    "frequency": "monthly",
+                    "source": "ECB",
+                    "weight": 2.0
+                },
+                "pmi": {
+                    "description": "PMI Composite",
+                    "frequency": "monthly",
+                    "source": "IHS Markit",
+                    "weight": 1.0
+                },
+                "retail_sales": {
+                    "description": "Retail Sales",
+                    "frequency": "monthly",
+                    "source": "Eurostat",
+                    "weight": 1.0
+                },
+                "trade_balance": {
+                    "description": "Trade Balance",
+                    "frequency": "monthly",
+                    "source": "Eurostat",
+                    "weight": 1.0
+                },
+                "unemployment": {
+                    "description": "Unemployment Rate",
+                    "frequency": "monthly",
+                    "source": "Eurostat",
+                    "weight": 1.0
+                },
+                "consumer_confidence": {
+                    "description": "Consumer Confidence Index",
+                    "frequency": "monthly",
+                    "source": "European Commission",
+                    "weight": 0.5
+                }
+            }
+        },
+        "UK": {
+            "name": "United Kingdom",
+            "currency": "GBP",
+            "indicators": {
+                "cpi": {
+                    "description": "Consumer Price Index",
+                    "frequency": "monthly",
+                    "source": "ONS",
+                    "weight": 1.0
+                },
+                "gdp": {
+                    "description": "GDP Growth Rate",
+                    "frequency": "quarterly",
+                    "source": "ONS",
+                    "weight": 2.0
+                },
+                "interest_rate": {
+                    "description": "Bank of England Rate",
+                    "frequency": "monthly",
+                    "source": "BoE",
+                    "weight": 2.0
+                },
+                "pmi": {
+                    "description": "PMI Composite",
+                    "frequency": "monthly",
+                    "source": "IHS Markit",
+                    "weight": 1.0
+                },
+                "retail_sales": {
+                    "description": "Retail Sales",
+                    "frequency": "monthly",
+                    "source": "ONS",
+                    "weight": 1.0
+                },
+                "trade_balance": {
+                    "description": "Trade Balance",
+                    "frequency": "monthly",
+                    "source": "ONS",
+                    "weight": 1.0
+                },
+                "unemployment": {
+                    "description": "Unemployment Rate",
+                    "frequency": "monthly",
+                    "source": "ONS",
+                    "weight": 1.0
+                },
+                "consumer_confidence": {
+                    "description": "Consumer Confidence Index",
+                    "frequency": "monthly",
+                    "source": "GfK",
+                    "weight": 0.5
+                }
+            }
+        },
+        "JP": {
+            "name": "Japan",
+            "currency": "JPY",
+            "indicators": {
+                "cpi": {
+                    "description": "Consumer Price Index",
+                    "frequency": "monthly",
+                    "source": "MIC",
+                    "weight": 1.0
+                },
+                "gdp": {
+                    "description": "GDP Growth Rate",
+                    "frequency": "quarterly",
+                    "source": "Cabinet Office",
+                    "weight": 2.0
+                },
+                "interest_rate": {
+                    "description": "BOJ Policy Rate",
+                    "frequency": "monthly",
+                    "source": "BOJ",
+                    "weight": 2.0
+                },
+                "pmi": {
+                    "description": "PMI Composite",
+                    "frequency": "monthly",
+                    "source": "Jibun Bank",
+                    "weight": 1.0
+                },
+                "retail_sales": {
+                    "description": "Retail Sales",
+                    "frequency": "monthly",
+                    "source": "METI",
+                    "weight": 1.0
+                },
+                "trade_balance": {
+                    "description": "Trade Balance",
+                    "frequency": "monthly",
+                    "source": "MOF",
+                    "weight": 1.0
+                },
+                "unemployment": {
+                    "description": "Unemployment Rate",
+                    "frequency": "monthly",
+                    "source": "MIC",
+                    "weight": 1.0
+                },
+                "consumer_confidence": {
+                    "description": "Consumer Confidence Index",
+                    "frequency": "monthly",
+                    "source": "Cabinet Office",
+                    "weight": 0.5
+                }
+            }
+        },
+        "CN": {
+            "name": "China",
+            "currency": "CNY",
+            "indicators": {
+                "cpi": {
+                    "description": "Consumer Price Index",
+                    "frequency": "monthly",
+                    "source": "NBS",
+                    "weight": 1.0
+                },
+                "gdp": {
+                    "description": "GDP Growth Rate",
+                    "frequency": "quarterly",
+                    "source": "NBS",
+                    "weight": 2.0
+                },
+                "interest_rate": {
+                    "description": "PBOC Loan Prime Rate",
+                    "frequency": "monthly",
+                    "source": "PBOC",
+                    "weight": 2.0
+                },
+                "pmi": {
+                    "description": "PMI Manufacturing",
+                    "frequency": "monthly",
+                    "source": "NBS",
+                    "weight": 1.0
+                },
+                "retail_sales": {
+                    "description": "Retail Sales",
+                    "frequency": "monthly",
+                    "source": "NBS",
+                    "weight": 1.0
+                },
+                "trade_balance": {
+                    "description": "Trade Balance",
+                    "frequency": "monthly",
+                    "source": "Customs",
+                    "weight": 1.0
+                },
+                "unemployment": {
+                    "description": "Unemployment Rate",
+                    "frequency": "quarterly",
+                    "source": "NBS",
+                    "weight": 1.0
+                },
+                "consumer_confidence": {
+                    "description": "Consumer Confidence Index",
+                    "frequency": "monthly",
+                    "source": "NBS",
+                    "weight": 0.5
+                }
+            }
+        }
+    },
+    "thresholds": {
+        "goldilocks": {
+            "gdp_min": 1.0,
+            "cpi_max": 0.5
+        },
+        "overheating": {
+            "gdp_min": 1.0,
+            "cpi_min": 1.0
+        },
+        "recession": {
+            "gdp_max": -1.0,
+            "cpi_max": -0.5
+        },
+        "stagflation": {
+            "gdp_max": -0.5,
+            "cpi_min": 1.0
+        }
+    },
+    "api_sources": {
+        "fred": {
+            "url": "https://api.stlouisfed.org/fred/series/observations",
+            "api_key": "YOUR_FRED_API_KEY",
+            "series": {
+                "cpi": "CPIAUCSL",
+                "gdp": "GDP",
+                "unemployment": "UNRATE",
+                "retail_sales": "RSXFSN",
+                "interest_rate": "FEDFUNDS"
+            }
+        },
+        "world_bank": {
+            "url": "https://api.worldbank.org/v2/country",
+            "indicators": {
+                "gdp": "NY.GDP.MKTP.KD.ZG",
+                "cpi": "FP.CPI.TOTL.ZG",
+                "trade_balance": "NE.TRD.GNFS.ZS"
+            }
+        },
+        "trading_economics": {
+            "url": "https://api.tradingeconomics.com",
+            "api_key": "YOUR_TRADING_ECONOMICS_API_KEY",
+            "indicators": {
+                "cpi": "cpi",
+                "gdp": "gdp",
+                "interest_rate": "interest_rate",
+                "pmi": "pmi"
+            }
+        }
+    }
+}
