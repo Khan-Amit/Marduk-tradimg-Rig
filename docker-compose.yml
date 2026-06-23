@@ -28,7 +28,7 @@ services:
       - "8080:8080"
     networks:
       - marduk-network
-    command: python main.py
+    command: python main.py --mode live
 
   # ============================================================
   # DASHBOARD SERVER
