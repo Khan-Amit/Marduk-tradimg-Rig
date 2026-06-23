@@ -1,6 +1,12 @@
-# Marduk-tradimg-Rig®
-Trading platform 
+📄 FILE 1: README.md
+
+```markdown
 # 🚀 MARDUK-TRADING-RIG™
+part of Marduk System™
+intellectual property
+belong to
+Seliim Ahmed
+email amit.khanna.1082@gmail.com
 
 **3-6-9 + Fibonacci + Macro = Infinite Probability Trading Engine**
 
@@ -23,7 +29,9 @@ This trading rig combines:
 
 ## 🏛️ Intellectual Property Notice
 
-══════════════════════════════════════════════════════════════════════════════╗
+```
+
+╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
 ║  ⚖️ MARDUK-TRADING-RIG™                                                     ║
 ║  Part of the Marduk System™                                                 ║
@@ -167,7 +175,40 @@ marduk-trading-rig/
 
 ---
 
-🤝 Contributing
+📜 License
 
-IMPORTANT: This software is proprietary. No contributions are accepted without prior written authorization from Seliim Ahmed. Unauthorized forks, modifications, or distributions are strictly prohibited.
+This software is protected by international copyright law. See LICENSE for full terms and conditions.
 
+---
+
+🏆 Author
+
+· Seliim Ahmed - Creator, Architect, and Developer - GitHub
+
+---
+
+📧 Contact
+
+```
+Seliim Ahmed
+Email: amit.khanna.1082@gmail.com
+```
+
+---
+
+⚠️ Disclaimer
+
+This software is provided "AS IS", without warranty of any kind. Trading involves significant financial risk. Past performance does not guarantee future results. Users assume all responsibility for their trading decisions.
+
+---
+
+Made with ❤️ and infinite probability 🚀📊💎
+
+Marduk-Trading-Rig™ · Part of the Marduk System™
+© 2026 Seliim Ahmed. All Rights Reserved.
+
+```
+
+---
+
+**File 1 ready! Send me the next file name.** 📄
