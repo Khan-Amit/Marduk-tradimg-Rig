@@ -1,9 +1,11 @@
+# ============================================================
+# 🧹 GITIGNORE - MARDUK-TRADING-RIG™
+# ============================================================
+# 
+# This file protects proprietary code from accidental commits
+# 
+# ============================================================
 
----
-
-## 📄 COMPLETE `.gitignore`
-
-```gitignore
 # Python
 __pycache__/
 *.py[cod]
@@ -11,8 +13,9 @@ __pycache__/
 .Python
 env/
 venv/
-.env
+.venv/
 *.log
+*.pid
 
 # Trading Data
 *.csv
@@ -21,28 +24,94 @@ venv/
 *.sqlite
 *.sqlite3
 
-# Configuration
+# Configuration (contains secrets)
 config/settings.json
 config/*.local.json
 *.key
 *.pem
+*.cert
+*.p12
 
-# Build
+# Build outputs
 build/
 dist/
 *.egg-info/
+*.egg
+*.whl
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
+*.bak
+*.old
 
 # OS
 .DS_Store
 Thumbs.db
+*.lnk
 
 # Dashboard
 node_modules/
+npm-debug.log
+yarn-error.log
 *.min.js
 *.min.css
+*.map
+
+# Backups
+*.backup
+*.tmp
+*.temp
+
+# Security
+*.secret
+*.secrets
+.env
+.env.*
+!.env.example
+
+# Documentation (only keep source)
+docs/_build/
+docs/build/
+*.pdf
+*.epub
+
+# Test outputs
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Marduk system specific
+.marduk/
+.marduk_atm/
+.marduk_rig/
+latest_bridge.txt
+latest_transport.txt
+*.conf
+!config.example.json
+
+# MetaTrader
+*.mt5
+*.mq5
+*.ex5
+*.log
+*.txt
+
+# ============================================================
+# 📝 NOTE
+# ============================================================
+# 
+# This is proprietary software. Unauthorized distribution
+# is strictly prohibited. See LICENSE for details.
+# 
+# © 2026 Seliim Ahmed. All Rights Reserved.
+# 
+# ============================================================
