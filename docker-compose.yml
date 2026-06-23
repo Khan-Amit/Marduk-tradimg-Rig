@@ -1,0 +1,96 @@
+# ============================================================
+# 🐳 DOCKER-COMPOSE - MARDUK-TRADING-RIG™
+# ============================================================
+#
+# © 2026 Seliim Ahmed. All Rights Reserved.
+#
+# ============================================================
+
+version: '3.8'
+
+services:
+  # ============================================================
+  # MAIN TRADING ENGINE
+  # ============================================================
+  trading-engine:
+    build: .
+    container_name: marduk-trading-engine
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=UTC
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./backtesting/results:/app/backtesting/results
+    ports:
+      - "8080:8080"
+    networks:
+      - marduk-network
+    command: python main.py
+
+  # ============================================================
+  # DASHBOARD SERVER
+  # ============================================================
+  dashboard:
+    build: .
+    container_name: marduk-dashboard
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TZ=UTC
+    volumes:
+      - ./dashboard:/app/dashboard
+      - ./logs:/app/logs
+    ports:
+      - "5000:5000"
+    networks:
+      - marduk-network
+    command: python -m flask run --host=0.0.0.0 --port=5000
+
+  # ============================================================
+  # REDIS FOR CACHING
+  # ============================================================
+  redis:
+    image: redis:alpine
+    container_name: marduk-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - marduk-network
+    volumes:
+      - ./redis-data:/data
+
+  # ============================================================
+  # POSTGRES FOR DATA STORAGE
+  # ============================================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: marduk-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=marduk
+      - POSTGRES_PASSWORD=marduk123
+      - POSTGRES_DB=marduk_trading
+    ports:
+      - "5432:5432"
+    networks:
+      - marduk-network
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+# ============================================================
+# NETWORKS
+# ============================================================
+networks:
+  marduk-network:
+    driver: bridge
+
+# ============================================================
+# VOLUMES
+# ============================================================
+volumes:
+  postgres-data:
+  redis-data:
