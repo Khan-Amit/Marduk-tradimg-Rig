@@ -193,12 +193,32 @@
         .fib-prob.medium { color: #f5a623; }
         .fib-prob.low { color: #d32f2f; }
 
+        /* ENERGY */
+        .energy-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+        .energy-node {
+            text-align: center;
+            padding: 0.5rem 1rem;
+            background: #f8f9fb;
+            border-radius: 0.5rem;
+            border: 1px solid #e8ecf0;
+            flex: 1;
+        }
+        .energy-node.active {
+            border-color: #22a65e;
+            background: #e8f5ed;
+        }
+
         /* TERMINAL */
         .terminal {
             background: #f8f9fb;
             border-radius: 0.5rem;
             padding: 0.75rem 1rem;
-            max-height: 250px;
+            max-height: 200px;
             overflow-y: auto;
             font-size: 0.7rem;
             font-family: 'Courier New', monospace;
@@ -213,53 +233,8 @@
         .terminal-line.error { border-left-color: #d32f2f; color: #d32f2f; }
         .terminal-line.success { border-left-color: #22a65e; color: #22a65e; }
         .terminal-line.warning { border-left-color: #f5a623; color: #f5a623; }
-        .terminal-line .timestamp { color: #6b7a8f; font-size: 0.6rem; margin-right: 0.5rem; }
 
-        /* POSITIONS */
-        .position-empty {
-            color: #6b7a8f;
-            text-align: center;
-            padding: 1rem 0;
-            font-style: italic;
-        }
-        .position-row {
-            display: grid;
-            grid-template-columns: 1fr 0.8fr 1fr 1fr 1fr 0.8fr;
-            gap: 0.3rem;
-            padding: 0.4rem 0.5rem;
-            border-bottom: 1px solid #e8ecf0;
-            font-size: 0.75rem;
-            align-items: center;
-        }
-        .position-row.header {
-            color: #6b7a8f;
-            font-size: 0.55rem;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-        .position-row .pos-symbol { font-weight: 700; color: #1a2332; }
-        .position-row .pos-action.buy { color: #22a65e; }
-        .position-row .pos-action.sell { color: #d32f2f; }
-        .position-row .pos-pnl.positive { color: #22a65e; }
-        .position-row .pos-pnl.negative { color: #d32f2f; }
-
-        /* FOOTER */
-        .footer {
-            background: #ffffff;
-            border-top: 1px solid #e8ecf0;
-            padding: 0.75rem 0;
-            margin-top: auto;
-        }
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            font-size: 0.65rem;
-            color: #6b7a8f;
-        }
-        .footer-container span:first-child { color: #1a2332; font-weight: 600; }
+        /* BUTTONS */
         .btn {
             background: #1a2332;
             color: #ffffff;
@@ -279,14 +254,37 @@
             border-radius: 2rem;
             font-size: 0.7rem;
             cursor: pointer;
-            font-family: 'Segoe UI', monospace;
         }
         .btn-outline:hover { background: #f0f2f5; }
         .btn-success { background: #22a65e; }
         .btn-success:hover { background: #1a8a4e; }
-        .btn-danger { background: #d32f2f; }
-        .btn-danger:hover { background: #b71c1c; }
         .btn-group { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.5rem; }
+
+        /* FOOTER */
+        .footer {
+            background: #ffffff;
+            border-top: 1px solid #e8ecf0;
+            padding: 0.75rem 0;
+            margin-top: auto;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            font-size: 0.65rem;
+            color: #6b7a8f;
+        }
+        .footer-container span:first-child { color: #1a2332; font-weight: 600; }
+
+        /* POSITIONS */
+        .position-empty {
+            color: #6b7a8f;
+            text-align: center;
+            padding: 1rem 0;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -353,16 +351,16 @@
         <!-- 3-6-9 -->
         <section class="card">
             <h2 class="card-title">⚡ 3-6-9 ENERGY FLOW</h2>
-            <div style="display:flex;justify-content:space-around;gap:1rem;margin-bottom:0.75rem;">
-                <div style="text-align:center;padding:0.5rem 1rem;background:#f8f9fb;border-radius:0.5rem;border:1px solid #e8ecf0;flex:1;" id="node3">
+            <div class="energy-grid">
+                <div class="energy-node" id="node3">
                     <div style="color:#6b7a8f;font-size:0.6rem;text-transform:uppercase;">3:00</div>
                     <div style="font-size:1.25rem;">⚪</div>
                 </div>
-                <div style="text-align:center;padding:0.5rem 1rem;background:#f8f9fb;border-radius:0.5rem;border:1px solid #e8ecf0;flex:1;" id="node6">
+                <div class="energy-node" id="node6">
                     <div style="color:#6b7a8f;font-size:0.6rem;text-transform:uppercase;">6:00</div>
                     <div style="font-size:1.25rem;">⚪</div>
                 </div>
-                <div style="text-align:center;padding:0.5rem 1rem;background:#f8f9fb;border-radius:0.5rem;border:1px solid #e8ecf0;flex:1;" id="node9">
+                <div class="energy-node" id="node9">
                     <div style="color:#6b7a8f;font-size:0.6rem;text-transform:uppercase;">9:00</div>
                     <div style="font-size:1.25rem;">⚪</div>
                 </div>
@@ -413,7 +411,7 @@
 </footer>
 
 <!-- ============================================================
-     JAVASCRIPT - WHITE THEME DASHBOARD
+     JAVASCRIPT
      ============================================================ -->
 <script>
     (function() {
@@ -424,27 +422,9 @@
         // ============================================================
 
         const CONFIG = {
-            // FREE APIs - No API Key Required!
             forexApi: 'https://api.exchangerate.host/latest?base=USD',
-            ratesApi: 'https://api.exchangerate.host/latest?base=GBP',
             cryptoApi: 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,monero&vs_currencies=usd',
-            quoteApi: 'https://api.exchangerate.host/convert?from=USD&to=GBP',
             updateInterval: 10000 // 10 seconds
-        };
-
-        // ============================================================
-        // 🧠 STATE
-        // ============================================================
-
-        const state = {
-            data: {
-                account: { balance: 0, equity: 0, pnl: 0, marginLevel: 0 },
-                signal: { action: 'HOLD', confidence: 0, entry: 0, sl: 0, tp: 0, rr: 0 },
-                energy: { node3: false, node6: false, node9: false, confluence: 'C0' },
-                fibonacci: { f236: 0, f382: 0, f500: 0, f618: 0, f786: 0 },
-                positions: [],
-                terminal: []
-            }
         };
 
         // ============================================================
@@ -495,7 +475,7 @@
             const timestamp = new Date().toLocaleTimeString('en-US', { hour12: false });
             const div = document.createElement('div');
             div.className = `terminal-line ${type}`;
-            div.innerHTML = `<span class="timestamp">${timestamp}</span> ${message}`;
+            div.innerHTML = `${timestamp} · ${message}`;
             DOM.terminal.appendChild(div);
             DOM.terminal.scrollTop = DOM.terminal.scrollHeight;
             while (DOM.terminal.children.length > 50) {
@@ -622,12 +602,10 @@
                     if (!node.id) continue;
                     const dot = node.id.querySelector('div:last-child');
                     if (node.active) {
-                        node.id.style.borderColor = '#22a65e';
-                        node.id.style.background = '#e8f5ed';
+                        node.id.classList.add('active');
                         dot.textContent = '🟢';
                     } else {
-                        node.id.style.borderColor = '#e8ecf0';
-                        node.id.style.background = '#f8f9fb';
+                        node.id.classList.remove('active');
                         dot.textContent = '⚪';
                     }
                 }
@@ -660,20 +638,14 @@
                 DOM.positionsContainer.innerHTML = '<div class="position-empty">No open positions</div>';
                 return;
             }
-            let html = `<div class="position-row header">
-                <span>Symbol</span><span>Action</span><span>Volume</span>
-                <span>Entry</span><span>Current</span><span>P&L</span></div>`;
+            let html = '';
             for (const pos of positions) {
                 const pnl = pos.pnl || 0;
-                html += `<div class="position-row">
-                    <span class="pos-symbol">${pos.symbol || '--'}</span>
-                    <span class="pos-action ${(pos.action || '').toLowerCase()}">${pos.action || '--'}</span>
+                html += `<div style="display:flex;justify-content:space-between;padding:0.3rem 0;border-bottom:1px solid #e8ecf0;font-size:0.8rem;">
+                    <span>${pos.symbol || '--'}</span>
+                    <span class="${(pos.action || '').toLowerCase()}">${pos.action || '--'}</span>
                     <span>${pos.volume || '--'}</span>
-                    <span>${pos.entry ? pos.entry.toFixed(5) : '--'}</span>
-                    <span>${pos.current ? pos.current.toFixed(5) : '--'}</span>
-                    <span class="pos-pnl ${pnl > 0 ? 'positive' : pnl < 0 ? 'negative' : ''}">
-                        ${pnl > 0 ? '+' : ''}${pnl.toFixed(2)}
-                    </span>
+                    <span style="color:${pnl > 0 ? '#22a65e' : pnl < 0 ? '#d32f2f' : '#6b7a8f'}">${pnl > 0 ? '+' : ''}${pnl.toFixed(2)}</span>
                 </div>`;
             }
             DOM.positionsContainer.innerHTML = html;
@@ -683,10 +655,7 @@
         // 🎯 EVENT LISTENERS
         // ============================================================
 
-        document.getElementById('fetchDataBtn').addEventListener('click', () => {
-            fetchData();
-        });
-
+        document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
         document.getElementById('clearLogBtn').addEventListener('click', () => {
             DOM.terminal.innerHTML = '<div class="terminal-line">> Log cleared</div>';
             addTerminalLine('🧹 Log cleared', 'info');
@@ -701,7 +670,6 @@
         addTerminalLine('✅ Dashboard ready!', 'success');
         addTerminalLine('💡 Click "Fetch Data" to load market data', 'info');
 
-        // Auto-fetch every 10 seconds
         setTimeout(fetchData, 1000);
         setInterval(fetchData, CONFIG.updateInterval);
 
