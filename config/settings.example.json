@@ -1,0 +1,75 @@
+{
+    "meta": {
+        "name": "MARDUK-TRADING-RIG™",
+        "version": "1.0.0",
+        "author": "Seliim Ahmed",
+        "email": "amit.khanna.1082@gmail.com",
+        "copyright": "© 2026 Seliim Ahmed. All Rights Reserved."
+    },
+    "trading": {
+        "symbols": ["GBPUSD", "EURUSD", "USDJPY", "AUDUSD"],
+        "timeframe": "M1",
+        "max_positions": 5,
+        "risk_per_trade": 0.02,
+        "max_drawdown": 0.20,
+        "daily_loss_limit": 0.10,
+        "commission": 0.0001
+    },
+    "indicators": {
+        "energy_flow": {
+            "nodes": [3, 6, 9],
+            "vortex_threshold": 0.03
+        },
+        "fibonacci": {
+            "levels": [0.236, 0.382, 0.500, 0.618, 0.786],
+            "zone_widths": [0.003, 0.005, 0.010, 0.020]
+        },
+        "macro": {
+            "weights": {
+                "cpi": 1.0,
+                "gdp": 2.0,
+                "interest_rate": 2.0,
+                "pmi": 1.0,
+                "retail_sales": 1.0,
+                "trade_balance": 1.0,
+                "unemployment": 1.0,
+                "consumer_confidence": 0.5
+            }
+        }
+    },
+    "risk": {
+        "min_stop_pips": 20,
+        "max_stop_pips": 200,
+        "min_risk_reward": 1.5,
+        "target_risk_reward": 2.0,
+        "max_positions": 5,
+        "risk_per_trade": 0.02,
+        "max_drawdown": 0.20,
+        "daily_loss_limit": 0.10
+    },
+    "backtest": {
+        "initial_balance": 10000,
+        "start_date": "2026-01-01",
+        "end_date": "2026-06-23",
+        "commission": 0.0001,
+        "slippage": 0.0001
+    },
+    "dashboard": {
+        "update_interval": 5,
+        "max_log_lines": 50,
+        "port": 8080,
+        "host": "0.0.0.0"
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        "file": "logs/marduk_trading.log"
+    },
+    "mt5": {
+        "login": null,
+        "password": null,
+        "server": null,
+        "timeout": 30,
+        "retry_attempts": 3
+    }
+}
